@@ -32,4 +32,4 @@ Looks like they're loading angular in the head of the file, rather than at the b
 
 Right. I'll need an `app.js` file too.
 
-`Added app.js file`
+[`Added app.js file`](https://github.com/elliotwhitehead/dive-angular/commit/db10224da1877408ddccda607a7452967d6129c6)
