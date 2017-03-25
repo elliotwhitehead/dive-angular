@@ -7,3 +7,11 @@ Okay first thing's first, start up a 7 minute timer.
 Set up come basic html scaffolding and linked in local copy of angular 1.6 and materialize.
 
 `commit (d82dc31ffbae669d11ede95050e885d20d165c24)[https://github.com/elliotwhitehead/dive-angular/commit/d82dc31ffbae669d11ede95050e885d20d165c24]`
+
+Darn. That link I just added above didn't work. I didn't realize that the code formatting backticks escape links..
+
+Duh. Here's what I meant: 
+
+`commit` (`d82dc31ffbae669d11ede95050e885d20d165c24`)[https://github.com/elliotwhitehead/dive-angular/commit/d82dc31ffbae669d11ede95050e885d20d165c24]
+
+>Sat Mar 25 11:31:37 MDT 2017
