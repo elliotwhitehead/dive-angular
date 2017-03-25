@@ -4,7 +4,7 @@ Today I’m going to put the rails stuff on hold for a minute to work on buildin
 
 Okay first thing's first, start up a 7 minute timer.
 
-Set up come basic html scaffolding and linked in local copy of angular 1.6 and materialize.
+> Set up come basic html scaffolding and linked in local copy of angular 1.6 and materialize.
 
 `commit (d82dc31ffbae669d11ede95050e885d20d165c24)[https://github.com/elliotwhitehead/dive-angular/commit/d82dc31ffbae669d11ede95050e885d20d165c24]`
 
@@ -19,3 +19,13 @@ Duh. Here's what I meant:
 Lol nope! Had the MD formatting for links mixed up. Let's try this:
 
 `commit` [`d82dc31ffbae669d11ede95050e885d20d165c24`](https://github.com/elliotwhitehead/dive-angular/commit/d82dc31ffbae669d11ede95050e885d20d165c24)
+
+alright, onwards!
+
+Sat Mar 25 11:38:49 MDT 2017
+
+"The Basics," they said.
+
+Looks like they're loading angular in the head of the file, rather than at the bottom of the body, which makes sesne since angular will go through and reprocess the html accordingly. 
+
+> Moved angularjs file inside <head>
