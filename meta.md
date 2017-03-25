@@ -28,4 +28,4 @@ Sat Mar 25 11:38:49 MDT 2017
 
 Looks like they're loading angular in the head of the file, rather than at the bottom of the body, which makes sesne since angular will go through and reprocess the html accordingly. 
 
-> Moved angularjs file inside <head>
+[`Moved angularjs file inside <head>`](https://github.com/elliotwhitehead/dive-angular/commit/ab969d3d5085506afdef7392449c284d68a9f341)
