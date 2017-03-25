@@ -15,3 +15,7 @@ Duh. Here's what I meant:
 `commit` (`d82dc31ffbae669d11ede95050e885d20d165c24`)[https://github.com/elliotwhitehead/dive-angular/commit/d82dc31ffbae669d11ede95050e885d20d165c24]
 
 >Sat Mar 25 11:31:37 MDT 2017
+
+Lol nope! Had the MD formatting for links mixed up. Let's try this:
+
+`commit` [`d82dc31ffbae669d11ede95050e885d20d165c24`](https://github.com/elliotwhitehead/dive-angular/commit/d82dc31ffbae669d11ede95050e885d20d165c24)
