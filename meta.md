@@ -33,3 +33,11 @@ Looks like they're loading angular in the head of the file, rather than at the b
 Right. I'll need an `app.js` file too.
 
 [`Added app.js file`](https://github.com/elliotwhitehead/dive-angular/commit/db10224da1877408ddccda607a7452967d6129c6)
+
+## Sat Mar 25 11:49:07 MDT 2017
+
+Since my timestamps here are now headers, I went ahead and updated my `.bash_profile` alias to make that a little bit easier.
+
+[`Updated date -> clipboard alias to prepend the date with '## ' for quicker markdown blogging`](https://github.com/elliotwhitehead/dotfiles/commit/aca576d028053910bb43a760fd723af9bdfecadb)
+
+Cool. I'll go ahead and make a simple todo app. Classic right?
