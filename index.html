@@ -11,8 +11,13 @@
 		<h1>My To-Do List</h1>
 		<div class="row" data-ng-controller="ListController as todoList">
 			<ul>
-				<li class="done-{{task.done}}" data-ng-repeat="task in todoList.tasks">{{ task.text }}</li>
+				<li class="done-{{task.done}}" data-ng-repeat="task in todoList.tasks">{{ task.text }} ({{ task.priority }}) - {{ task.done }}</li>
 			</ul>
+
+			<form data-ng-submit="todoList.addTask()" accept-charset="utf-8">
+				<input type="text" data-ng-model="todoList.taskText" size="50">
+
+			</form>
 		</div>
 	</div>
 
