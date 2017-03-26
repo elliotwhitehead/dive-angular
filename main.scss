@@ -6,3 +6,8 @@
 	color: #999;
 	text-decoration: line-through;
 }
+
+select{
+	//override Materialize CSS
+	display: inline-block !important;
+}

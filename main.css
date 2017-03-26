@@ -5,4 +5,7 @@
   color: #999;
   text-decoration: line-through; }
 
+select {
+  display: inline-block !important; }
+
 /*# sourceMappingURL=main.css.map */

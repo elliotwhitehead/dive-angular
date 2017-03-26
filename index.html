@@ -19,6 +19,12 @@
 				<form data-ng-submit="todoList.addTask()" accept-charset="utf-8">
 					<input placeholder="What needs to be done?" type="text" data-ng-model="todoList.taskText" size="50">
 
+					<select data-ng-model="todoList.priority">
+						<option value="" disabled selected>Choose a priority</option>
+						<option value="1">1 (low)</option>
+						<option value="2">2 (medium)</option>
+						<option value="3">3 (high) </option>
+					</select>
 				</form>
 			</div>
 		</div>
