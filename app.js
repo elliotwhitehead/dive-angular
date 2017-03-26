@@ -11,5 +11,9 @@ todoApp.controller('ListController',function(){
 		{text:'load this page', done:true, priority:1},
 		{text:'add an item to the list', done:false, priority:2}];
 
+	myList.addTask = function(){
+		myList.tasks.push({text:myList.taskText, done:false, priority:myList.priority});
+		myList.taskText = '';
+	};
 
 });
