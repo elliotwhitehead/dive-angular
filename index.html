@@ -4,27 +4,29 @@
 	<title>A Dive into Angular</title>
 	<link rel="stylesheet" type="text/css" href="/Users/elliotwhitehead/Documents/Dev/resources/materialize/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<script type="text/javascript" src="/Users/elliotwhitehead/Documents/Dev/resources/angularjs_1.6/angular.min.js" ></script>
+	<script type="text/javascript" src="/Users/elliotwhitehead/Documents/Dev/resources/angularjs_1.6/angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
 <body>
 	<div class="container">
 		<h1 class="app-title">My To-Do List</h1>
-		<div class="row" data-ng-controller="ListController as todoList">
+		<div class="row todo-list" data-ng-controller="ListController as todoList">
 			<div class="col s12 m6 l4 offset-m3 offset-l4">
 				<ul>
 					<li class="done-{{task.done}}" data-ng-repeat="task in todoList.tasks">{{ task.text }} ({{ task.priority }})</li>
 				</ul>
 
 				<form data-ng-submit="todoList.addTask()" accept-charset="utf-8">
-					<input placeholder="What needs to be done?" type="text" data-ng-model="todoList.taskText" size="50">
+					<input required placeholder="What needs to be done?" type="text" data-ng-model="todoList.taskText" size="50">
 
-					<select data-ng-model="todoList.priority">
+					<select required data-ng-model="todoList.priority">
 						<option value="" disabled selected>Choose a priority</option>
 						<option value="1">1 (low)</option>
 						<option value="2">2 (medium)</option>
 						<option value="3">3 (high) </option>
 					</select>
+
+					<input type="submit" value="Add Task">
 				</form>
 			</div>
 		</div>
