@@ -9,16 +9,18 @@
 </head>
 <body>
 	<div class="container">
-		<h1>My To-Do List</h1>
+		<h1 class="app-title">My To-Do List</h1>
 		<div class="row" data-ng-controller="ListController as todoList">
-			<ul>
-				<li class="done-{{task.done}}" data-ng-repeat="task in todoList.tasks">{{ task.text }} ({{ task.priority }}) - {{ task.done }}</li>
-			</ul>
+			<div class="col s12 m6 l4 offset-m3 offset-l4">
+				<ul>
+					<li class="done-{{task.done}}" data-ng-repeat="task in todoList.tasks">{{ task.text }} ({{ task.priority }})</li>
+				</ul>
 
-			<form data-ng-submit="todoList.addTask()" accept-charset="utf-8">
-				<input type="text" data-ng-model="todoList.taskText" size="50">
+				<form data-ng-submit="todoList.addTask()" accept-charset="utf-8">
+					<input placeholder="What needs to be done?" type="text" data-ng-model="todoList.taskText" size="50">
 
-			</form>
+				</form>
+			</div>
 		</div>
 	</div>
 
