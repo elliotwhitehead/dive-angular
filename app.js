@@ -17,3 +17,9 @@ todoApp.controller('ListController',function(){
 	};
 
 });
+
+todoApp.filter('dashify', function(){
+	return function(id){
+		return id.replace(/ /g, '-');
+	}
+});

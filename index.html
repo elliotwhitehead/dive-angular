@@ -14,8 +14,8 @@
 			<div class="col s12 m6 l4 offset-m3 offset-l4">
 				<ul>
 					<li class="task" data-ng-repeat="task in todoList.tasks">
-						<input id="{{ task.text }}" type="checkbox" class="filled-in" data-ng-model="task.done">
-						<label for="{{ task.text }}" class="task done-{{task.done}}">{{ task.text }} ({{ task.priority }})</label>
+						<input id="{{ task.text | dashify }}" type="checkbox" class="filled-in" data-ng-model="task.done">
+						<label for="{{ task.text | dashify }}" class="task done-{{task.done}}">{{ task.text }} ({{ task.priority }})</label>
 					</li>
 				</ul>
 
