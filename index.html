@@ -15,7 +15,7 @@
 				<ul>
 					<li class="task" data-ng-repeat="task in todoList.tasks">
 						<input id="{{ task.text | dashify }}" type="checkbox" class="filled-in" data-ng-model="task.done">
-						<label for="{{ task.text | dashify }}" class="task done-{{task.done}}">{{ task.text }} ({{ task.priority }})</label>
+						<label for="{{ task.text | dashify }}" class="task done-{{task.done}} {{ task.priority }}">{{ task.text }}</label>
 					</li>
 				</ul>
 
@@ -24,9 +24,9 @@
 
 					<select required data-ng-model="todoList.priority">
 						<option value="" disabled selected>How important is it?</option>
-						<option value="1">1 (somewhat)</option>
-						<option value="2">2 (quite)</option>	
-						<option value="3">3 (very) </option>
+						<option value="somewhat">Somewhat</option>
+						<option value="quite">Quite</option>
+						<option value="very">Very</option>
 					</select>
 
 					<input class="btn-large waves-effect waves-light" type="submit" value="Add Task">
