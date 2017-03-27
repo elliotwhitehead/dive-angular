@@ -97,12 +97,31 @@ Well that was incredibly easy. I forgot about the `required` attribute you can a
 
 [`Required both text and priority fields to be filled out`](https://github.com/elliotwhitehead/dive-angular/commit/1836f2c48dfe8c35e9f25cd39dea8bf74816d93f)
 
-Sweet! That's pretty mucha fully functioning to-do list application! I learned a lot about Angular and have just scratched the surface. That's all I have time for today (off to work on my car again -_-), but I think I'll come back and add persistince and even authentication with [Google's Firebase](https://firebase.google.com)! 
+Sweet! That's pretty much a fully functioning to-do list application! I learned a lot about Angular and have just scratched the surface. That's all I have time for today (off to work on my car again -_-), but I think I'll come back and add persistince and even authentication with [Google's Firebase](https://firebase.google.com)! 
 
+## Mon Mar 27 07:53:23 MDT 2017
 
+Wait, what the hell am I talking about? I still need to add the ability to mark an item as complete, and editing a task would be nice too.
 
+[`Added materialize checkboxes and wired up an Angular 'done' model to them.`](https://github.com/elliotwhitehead/dive-angular/commit/27882cc6a6dbd1cc0c5d900bf439c2400e4bc787)
 
+Cool, so now I can mark items on the list as complete, but if you look at the implementation there, it's a little hacky. In order to make use of Materialize's checkboxes, I had to use a `<label>` tag with a `for=""` attribute matching the id of the the checkbox. However since these todos are generated dynamically, and don't have unique id's or anything, I just passed in the task's text property in the `for=""` and `id=""` properties. The problem is that this results in `<label>` elements with ids such as: `id="complete this task"`, which is not valid HTML. Id's [should not have spaces](https://www.w3schools.com/tags/att_global_id.asp). Now to fix that. I think I'm going to need to build a custom Angular filter. _**Cracks knuckles**_
 
+[`Built a custom Angular filter to replace spaces with dashes for dynamically gererating HTML ids`](https://github.com/elliotwhitehead/dive-angular/commit/a8359092b50a28559e90143296ccbcb1aa040e2d)
 
+Cool! That was fun. One thing I learned is that you cannot use hyphens in the name of a custom filter. Initially I tried to use this:
 
+```
+todoApp.filter('dash-ify', function(){
+	return function(id){
+		return id.replace(/ /g, '-');
+	}
+});
+```
+And used the filter:
+```
+<input id="{{ task.text | dash-ify }}" type="checkbox" class="filled-in" data-ng-model="task.done">
+```
+
+Seeing [this](https://docs.angularjs.org/error/$parse/syntax?p0=-&p1=is%20an%20unexpected%20token&p2=17&p3=task.text%20%7C%20dash-ify&p4=-ify) error, I assumed there must be an issue with how I named my filter, and sure enough it says it right in the developer guide in a [bright yellow note](https://docs.angularjs.org/guide/filter#creating-custom-filters) field! RTFM, bro.
 
