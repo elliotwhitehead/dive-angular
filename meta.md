@@ -64,3 +64,45 @@ Go away, stupid `.DS_Store` files -_-
 ## Sat Mar 25 13:12:50 MDT 2017
 
 Well that's about all the time I have today. I need bike home and keep working on putting on my car back together..
+
+## Sun Mar 26 15:52:01 MDT 2017
+
+Day 2!
+
+[`Added function for adding a task to the list`](https://github.com/elliotwhitehead/dive-angular/commit/c99343880897150d766858413379e5a3d09da7ec)
+
+[`Added input form to add tasks`](https://github.com/elliotwhitehead/dive-angular/commit/ecbb186cb5371338c70931558a21cd7fec2b9eda)
+
+It works! It's a little harsh on the eyes though.
+
+[`Added a stylesheet`](https://github.com/elliotwhitehead/dive-angular/commit/5753407a03ee4556aaf799554bd19d397050e433)
+
+[`added Sass file. We're going full-boar on this weekend project :sunglasses:`](https://github.com/elliotwhitehead/dive-angular/commit/8407ebcfc6d8ca141c2bad2089d7240be3297e98)
+
+[`Added a few basic styles and a placeholder. Doesn't need to be pretty until it actually works`](https://github.com/elliotwhitehead/dive-angular/commit/31e9bfa97040b6d0ec8475975a00a1d96df32201)
+
+## Sun Mar 26 17:11:57 MDT 2017
+
+Got a little distracted with a couple of phone calls / messages. Back to it.
+
+Now I need to add a select input to assign the task's priority.
+
+[`Wired up form to accept a priority for a new task`](https://github.com/elliotwhitehead/dive-angular/commit/6884997bd989f01a604f8141f9422e398f214ea1)
+
+## Sun Mar 26 17:39:12 MDT 201
+
+So it works great now, but unfortunately there's no validation, so it's possible to add a task without any text or priority (or both). Let's fix that.
+
+Well that was incredibly easy. I forgot about the `required` attribute you can add to HTML form inputs, which Angular [supports and helps enfrorce](https://docs.angularjs.org/api/ng/input/input%5Btext%5D).
+
+[`Required both text and priority fields to be filled out`](https://github.com/elliotwhitehead/dive-angular/commit/1836f2c48dfe8c35e9f25cd39dea8bf74816d93f)
+
+Sweet! That's pretty mucha fully functioning to-do list application! I learned a lot about Angular and have just scratched the surface. That's all I have time for today (off to work on my car again -_-), but I think I'll come back and add persistince and even authentication with [Google's Firebase](https://firebase.google.com)! 
+
+
+
+
+
+
+
+
