@@ -2,9 +2,13 @@
 	text-align: center;
 }
 
-.done-true{
-	color: #999;
-	text-decoration: line-through;
+.task{
+	font-size: 1rem;
+	&.done-true{
+		color: #999;
+		text-decoration: line-through;}
+	&.done-false{
+		color: #343434;}
 }
 
 select{

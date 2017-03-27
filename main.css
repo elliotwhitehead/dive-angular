@@ -1,9 +1,13 @@
 .app-title {
   text-align: center; }
 
-.done-true {
-  color: #999;
-  text-decoration: line-through; }
+.task {
+  font-size: 1rem; }
+  .task.done-true {
+    color: #999;
+    text-decoration: line-through; }
+  .task.done-false {
+    color: #343434; }
 
 select {
   display: inline-block !important; }
