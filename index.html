@@ -13,7 +13,10 @@
 		<div class="row todo-list" data-ng-controller="ListController as todoList">
 			<div class="col s12 m6 l4 offset-m3 offset-l4">
 				<ul>
-					<li class="done-{{task.done}}" data-ng-repeat="task in todoList.tasks">{{ task.text }} ({{ task.priority }})</li>
+					<li class="task" data-ng-repeat="task in todoList.tasks">
+						<input id="{{ task.text }}" type="checkbox" class="filled-in" data-ng-model="task.done">
+						<label for="{{ task.text }}" class="task done-{{task.done}}">{{ task.text }} ({{ task.priority }})</label>
+					</li>
 				</ul>
 
 				<form data-ng-submit="todoList.addTask()" accept-charset="utf-8">
@@ -26,11 +29,11 @@
 						<option value="3">3 (high) </option>
 					</select>
 
+
 					<input type="submit" value="Add Task">
 				</form>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>
