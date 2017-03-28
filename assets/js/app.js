@@ -8,8 +8,8 @@ todoApp.controller('ListController',function(){
 
 	//add a few pre-populated items to be done
 	myList.tasks = [
-		{text:'load this page', done:true, priority:3},
-		{text:'add an item to the list', done:false, priority:2}];
+		{text:'load this page', done:true, priority:"Somewhat"},
+		{text:'add an item to the list', done:false, priority:"Very"}];
 
 	myList.addTask = function(){
 		myList.tasks.push({text:myList.taskText, done:false, priority:myList.priority});
